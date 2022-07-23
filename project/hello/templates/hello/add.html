@@ -1,0 +1,9 @@
+{% extends "hello/layout.html" %}
+{% block body %}
+       <form action="{% url 'hello:add' %}" method="post">
+            {% csrf_token %}
+            <input type="text" autocomplete="off" name="task" placeholder="Add a task" autofocus>
+            <button type="submit">Add task</button>
+       </form>
+       <a href="{% url 'hello:index' %}">View Tasks</a>
+{% endblock %}

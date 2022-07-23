@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>hello</title>
+        <link href="{% static 'hello/style.css' %}" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Tasks</h1>
+        <ul>
+            {%for x in q%}
+                <l1>{{x}}</l1>
+            {% endfor %}
+        </ul>
+        <a href="{% url 'hello:add' %}">Add a task</a>
+    </body>
+</html>
